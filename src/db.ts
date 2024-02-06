@@ -1,14 +1,17 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 
-const mongod = new MongoMemoryServer();
+let mongod: MongoMemoryServer;
+
 export const connectDatabase = async () => {
   try {
-    const uri = await mongod.getUri();
+    mongod = await MongoMemoryServer.create();
+    const uri = mongod.getUri();
+
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    } as any); // Cast to any to bypass TypeScript error
+    } as any);
     console.log('MongoDB connected');
   } catch (error) {
     console.error('MongoDB connection error:', error);
@@ -17,7 +20,7 @@ export const connectDatabase = async () => {
 };
 
 export const closeDatabase = async () => {
-  await mongoose.disconnect();
+  await mongoose.connection.close();
   await mongod.stop();
 };
 
