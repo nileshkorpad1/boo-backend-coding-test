@@ -1,8 +1,9 @@
 import express from 'express';
-import { voteOnComment } from '../controllers/voteController';
+import * as voteController from '../controllers/voteController';
 
 const router = express.Router();
 
-router.post('/:commentId', voteOnComment);
+// POST /api/votes - Submit a vote
+router.post('/votes', voteController.submitVote);
 
 export default router;
