@@ -6,8 +6,8 @@ import voteRouter from './routes/voteRoutes';
 const app = express();
 
 app.use(express.json());
-app.use('/profiles', profileRouter);
-app.use('/comments', commentRouter);
-app.use('/votes', voteRouter);
+app.use('/api/profiles', profileRouter);
+app.use('/api/comments', commentRouter);
+app.use('/api/votes', voteRouter);
 
 export default app;

@@ -9,11 +9,11 @@ interface IProfile extends Document {
 }
 
 const profileSchema: Schema = new Schema({
-  imageUrl: { type: String, required: true },
   name: { type: String, required: true },
   phone: { type: String, required: true },
   email: { type: String, required: true },
-  description: { type: String, required: true }
+  description: { type: String, required: true },
+  imageUrl: { type: String }  // made imageUrl optional
 });
 
 export default mongoose.model<IProfile>('Profile', profileSchema);
