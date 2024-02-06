@@ -55,7 +55,7 @@ export const deleteProfile = async (req: Request, res: Response) => {
       return res.status(404).json({ message: 'Profile not found' });
     }
     res.json({ message: 'Profile deleted successfully' });
-  } catch (error) {
+  } catch (error:any) {
     res.status(500).json({ message: error.message });
   }
 };
