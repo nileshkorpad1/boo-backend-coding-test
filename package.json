@@ -2,9 +2,9 @@
   "name": "backend-coding-test",
   "version": "1.0.0",
   "description": "Backend API for the coding test",
-  "main": "src/server.ts",
+ "main": "dist/server.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node dist/server.js",
     "test": "jest --setupFiles ./setup.ts",
     "test:coverage": "jest --setupFiles ./setup.ts --coverage",
     "build": "tsc"
@@ -12,6 +12,7 @@
   "author": "Nilesh Korpad <nileshkorpad@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.17.1",
     "mongoose": "^6.1.10"
   },
