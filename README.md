@@ -43,7 +43,11 @@ yarn test:coverage
 
 ## Base URL
 
-The base URL for all API requests is `http://localhost:3000/api`.
+The base URL for all API requests is 
+
+##### localhost: `http://localhost:3000/api` 
+##### Production: [https://bifrost-bxrl.onrender.com/api](https://bifrost-bxrl.onrender.com/api)
+
 
 ## Endpoints
 
