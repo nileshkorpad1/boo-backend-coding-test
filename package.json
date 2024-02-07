@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "test": "jest --setupFiles ./setup.ts",
-    "test:coverage": "jest --setupFiles ./setup.ts --coverage"
+    "test:coverage": "jest --setupFiles ./setup.ts --coverage",
+    "build": "tsc"
   },
   "author": "Nilesh Korpad <nileshkorpad@gmail.com>",
   "license": "ISC",
