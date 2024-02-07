@@ -4,6 +4,6 @@ import * as voteController from '../controllers/voteController';
 const router = express.Router();
 
 // POST /api/votes - Submit a vote
-router.post('/votes', voteController.submitVote);
+router.post('/', voteController.submitVote);
 
 export default router;
