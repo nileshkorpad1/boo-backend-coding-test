@@ -30,6 +30,16 @@ To run tests using Yarn, execute the following command:
 ```bash
 yarn test
 ```
+## Running Test coverage
+
+To run tests using Yarn, execute the following command:
+
+```bash
+yarn test:coverage
+```
+
+<img width="765" alt="image" src="https://github.com/nileshkorpad1/boo-backend-coding-test/assets/6122065/a82165cb-2217-4253-bf3e-3614daf54ef3">
+
 
 ## Base URL
 
